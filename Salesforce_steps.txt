@@ -1,0 +1,164 @@
+✅ Step 1: Sign Up for Salesforce (Only once)
+If you haven't signed up yet:
+
+Go to https://developer.salesforce.com/
+
+Click Sign Up
+
+Fill in your information
+
+Check your email → Confirm your email
+
+Log in to your new Salesforce account
+
+🧱 Step 2: Create a Custom Object – "Student"
+A custom object is like a table in a database (or Excel).
+
+Click the Gear icon (top right) → Click Setup
+
+In the Quick Find box (left side), type: Object Manager
+
+Click Object Manager
+
+Click Create > Custom Object
+
+Fill in:
+
+Label: Student
+
+Plural Label: Students
+
+Record Name: Student Name
+
+Check: ✅ Allow Reports, ✅ Allow Activities, ✅ Track Field History
+
+Leave other fields as default
+
+Click Save
+
+📝 Step 3: Add Fields to "Student"
+After saving, you’re taken to the Student object page
+
+Click Fields & Relationships (left menu)
+
+Click New → Choose Text
+
+Field Label: Email
+
+Length: 50
+
+Click Next, Next, then Save
+
+Repeat to add another field:
+
+Field Type: Text
+
+Field Label: Course
+
+Save
+
+✅ Now your Student object has:
+
+Student Name (default)
+
+Email
+
+Course
+
+💬 Step 4: Create a Custom Object – "Feedback"
+Go back to Object Manager
+
+Click Create > Custom Object
+
+Fill in:
+
+Label: Feedback
+
+Plural Label: Feedbacks
+
+Record Name: Feedback Name
+
+Click Save
+
+🧾 Step 5: Add Fields to "Feedback"
+Go to Fields & Relationships in the Feedback object and add:
+
+Picklist field:
+
+Label: Rating
+
+Values:
+
+Copy
+Edit
+1
+2
+3
+4
+5
+Save
+
+Long Text Area:
+
+Label: Comments
+
+Save
+
+Text:
+
+Label: Faculty
+
+Save
+
+Lookup Relationship:
+
+Related To: Student
+
+This links Feedback records to Students
+
+Save with default settings
+
+📌 Step 6: Create Tabs for Custom Objects
+Click the Gear icon → Go to Setup
+
+In Quick Find, type: Tabs → Click Tabs
+
+Under Custom Object Tabs, click New
+
+For each object:
+
+Object: Student (or Feedback)
+
+Tab Style: Choose any icon
+
+Click Next, then Save
+
+Repeat for both objects.
+
+🧩 Step 7: Create Lightning App to Access Tabs
+In Setup, type: App Manager → Click App Manager
+
+Click New Lightning App
+
+Fill in:
+
+App Name: FeedbackApp
+
+Check all boxes (especially for app visibility and utility bar)
+
+Add Tabs:
+
+Click Add Tabs
+
+Search and add: Student and Feedback
+
+Click Save and Finish
+
+🚀 Step 8: Use Your App
+Click the App Launcher (9-dot grid icon, top-left)
+
+Search for and open: FeedbackApp
+
+You’ll now see tabs for Students and Feedback
+
+Click each tab → Use the New button to create and manage records
